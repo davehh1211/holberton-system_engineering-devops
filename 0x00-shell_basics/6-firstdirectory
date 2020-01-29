@@ -1,3 +1,2 @@
 #!/bin/bash
-mkdir holberton /root/vagrant/tmp/
-
+mkdir /tmp/holberton
