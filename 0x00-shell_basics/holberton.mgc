@@ -1,2 +1,3 @@
 #!/bin/bash
-0 strong HOLBERTON holberton data
+0 string HOLBERTON holberton data
+!:mime data
