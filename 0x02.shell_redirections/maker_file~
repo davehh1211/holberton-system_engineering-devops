@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "#maker"
+touch $1
