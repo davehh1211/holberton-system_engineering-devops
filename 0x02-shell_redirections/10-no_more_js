@@ -1,2 +1,2 @@
-C#!/bin/bash
+#!/bin/bash
 find . -type f "*.js" -delete
