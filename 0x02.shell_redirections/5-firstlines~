@@ -1,2 +1,0 @@
-#!/bin/ban
-head --lines=10 /etc/passwd
