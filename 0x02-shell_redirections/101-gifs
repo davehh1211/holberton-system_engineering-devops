@@ -1,2 +1,2 @@
 #!/bin/bash
-find . "*.gif" |rev |cut -f1 -d '\' |rev |sort
+find . -name "*.gif" -printf "%f\n" |rev |cut -f1 -d '\' |rev |LC_ALL=C sort -f
