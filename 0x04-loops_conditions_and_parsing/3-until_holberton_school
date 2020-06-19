@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times using until
+n=0
+until [ "$((n += 1))" -gt 10 ] 
+do	echo 'Holberton School'
+done
