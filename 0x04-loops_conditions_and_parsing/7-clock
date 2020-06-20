@@ -4,7 +4,7 @@ i=0
 hour=0
 count=0
 echo "Hour: $hour"
-while [ "$i" -lt 780 ]; do
+while [ "$i" -le 766 ]; do
 	if [ "$count" -eq 59 ]; then
 		hour="$((hour+1))"
 		count=0
@@ -12,4 +12,5 @@ while [ "$i" -lt 780 ]; do
 	fi
 	count="$((count+1))"
 	echo "$count"
+	i="$((i+=1))"
 	done
