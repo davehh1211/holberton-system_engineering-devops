@@ -8,7 +8,7 @@ while [ "$i" -le 766 ]; do
 	if [ "$count" -eq 59 ]; then
 		hour="$((hour+1))"
 		count=0
-		echo "hour: $hour"
+		echo "Hour: $hour"
 	fi
 	count="$((count+1))"
 	echo "$count"
