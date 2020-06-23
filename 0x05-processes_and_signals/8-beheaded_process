@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#kill despite sigterm
+file="$(pgrep -f "7-highlander")"
+kill -9 "$file"
