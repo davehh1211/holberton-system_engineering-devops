@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo $$ > /var/run/holbertonscript.pid
+
+trap "echo 'Y U no love me?!'" SIGINT
+trap clean SIGQUIT 
+trap clean SIGTERM
+
+clean ()
+{
+	rm /var/run/holbertonscript.pid
+	echo 'I hate the kill command'
+	exit 1
+}
+
+control=0
+while [ "$control" ]; do
+		echo 'To infinity and beyond'
+		sleep 2
+done
