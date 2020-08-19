@@ -5,11 +5,18 @@ funct_domain () {
     domain="$1"
 	dig "$subdomain.$domain" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", domain, $4, $5 }' domain="$subdomain"
 }
-
-for sub_domain in "www" "lb-01" "web-01" "web-02"
-do
-	if [ "$2" == "$sub_domain" ]
-	then
+if [ "$2" ];
+then
+	for sub_domain in "www" "lb-01" "web-01" "web-02"
+	do
+		if [ "$2" == "$sub_domain" ]
+		then
+			funct_domain "$1" "$sub_domain"
+		fi
+	done
+else
+    for sub_domain in "www" "lb-01" "web-01" "web-02"
+	do
 	    funct_domain "$1" "$sub_domain"
-	fi
-done
+	done
+fi
