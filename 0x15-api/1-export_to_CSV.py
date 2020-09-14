@@ -19,4 +19,4 @@ if __name__ == "__main__":
         user_file = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in list_to_do:
             user_file.writerow([int(USER_ID), user.get('username'),
-                            task.get('completed'), task.get('title')])
+                                task.get('completed'), task.get('title')])
