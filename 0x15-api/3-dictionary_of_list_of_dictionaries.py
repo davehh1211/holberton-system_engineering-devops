@@ -13,10 +13,10 @@ if __name__ == "__main__":
         'https://jsonplaceholder.typicode.com/todos').json()
 
     user_id = {}
+    user_dict = {}
     for user in users:
         id_user = user.get('id')
         user_id[id_user] = []
-        user_dict = {}
         user_dict[id_user] = user.get('username')
 
     for task in list_to_do:
