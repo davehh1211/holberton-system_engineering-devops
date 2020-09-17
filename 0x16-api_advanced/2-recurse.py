@@ -20,7 +20,7 @@ def recurse(subreddit, hot_list=[], after=''):
     else:
         for titles in hot_children:
             hot_list.append(titles.get('data').get('title'))
-        if after is None:
-            return hot_list
-        else:
-            return recurse(subreddit, hot_list, after)
+    if after is None:
+        return hot_list
+    else:
+        return recurse(subreddit, hot_list, after)
