@@ -21,6 +21,8 @@ def recurse(subreddit, hot_list=[], after=''):
         for titles in hot_children:
             hot_list.append(titles.get('data').get('title'))
     if after is None:
+        if len(hot_children) == 0:
+            return None
         return hot_list
     else:
         return recurse(subreddit, hot_list, after)
