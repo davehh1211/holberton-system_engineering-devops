@@ -11,7 +11,7 @@ def top_ten(subreddit):
     if subreddit is None or type(subreddit) is not str:
         print(None)
     query_sub = requests.get('https://www.reddit.com/r/{}/hot.json'.format(
-        subreddit), headers={'user-agent': 'fake_user_agent'}).json()
+        subreddit), headers={'user-agent': 'fake_user_agent'}, allow_redirects=False).json()
     sub_number = query_sub.get('data', {}).get('children', None)
     if not sub_number:
         print(None)
