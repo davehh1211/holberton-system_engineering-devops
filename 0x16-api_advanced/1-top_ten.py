@@ -15,5 +15,6 @@ def top_ten(subreddit):
     sub_number = query_sub.get('data', {}).get('children', None)
     if not sub_number:
         print(None)
-    for tops in sub_number[:10]:
-        print(tops.get('data', {}).get('title', None))
+    else:
+        for tops in sub_number[:10]:
+            print(tops.get('data', {}).get('title', None))
